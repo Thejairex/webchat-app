@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  </head>
+
+<body class="vh-100">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col h-100">
+        <div id="chat">
+          <ul id="messages" ></ul>
+          <form id="message-form">
+            <input type="text" id="message-input" autocomplete="off">
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

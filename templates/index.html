@@ -1,0 +1,42 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<main class="container-fluid h-100 bg-dark">
+    <!-- <h1>Chating</h1> -->
+    <section class="row h-100" >
+        <article class="col-3">
+
+        </article>
+        <article class="col-6 h-100 bg-dark row align-items-end m-0 p-0 rounded border border-secondary">
+            <!-- <div class="rounded border border-secondary">
+                
+            </div> -->
+            <div class="align-self-start p-0 border-bottom border-secondary">
+                <h6 class="text-center text-white m-0 my-3  w-100">Sala 1</h6>
+            </div>
+            
+
+            <div class="align-self-end p-0 pb-3">
+                <ul id="messages" class="row justify-content-start overflow-y-scroll"></ul>
+                <form id="message-form" class="d-flex justify-content-center justify-content-evenly">
+                    <div class="col-auto m-0 p-0 w-75">
+                        <input type="text" class=" col-6 form-control rounded-pill" id="message-input" autocomplete="off">
+                    </div>
+                    <div class="col-auto m-0 p-0">
+                        <button type="submit" class="col-6 btn btn-primary w-100">Enviar</button>
+                    </div>
+                
+                </form>
+            </div>
+            
+            
+            
+        </article>
+        <article class="col-3">
+            
+        </article>
+    </section>
+</main>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock body %}
